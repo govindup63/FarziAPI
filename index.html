@@ -2,37 +2,23 @@
 <html>
 <head>
   <title>Farzi Mushayra of The Day</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body {
-      font-family: 'Courier New', Courier, monospace;
       background-color: #f8f8f8;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      padding-top: 50px;
     }
 
-    h1 {
-      color: #333;
-      font-size: 36px;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    #shayriContainer {
+    .shayri-container {
+      max-width: 500px;
+      margin: 0 auto;
       padding: 20px;
-      border: 1px solid #ccc;
       background-color: #fff;
       border-radius: 6px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
-      text-align: center;
     }
 
-    #shayriText {
+    .shayri-text {
       font-family: 'Courier New', Courier, monospace;
       font-size: 24px;
       font-weight: bold;
@@ -40,17 +26,19 @@
       line-height: 1.5;
     }
 
-    #shayarText {
+    .shayar-text {
       font-style: italic;
       color: #777;
     }
   </style>
 </head>
 <body>
-  <h1>Farzi Mushayra of The Day</h1>
-  <div id="shayriContainer">
-    <p id="shayriText">Loading...</p>
-    <p id="shayarText"></p>
+  <div class="container">
+    <h1 class="text-center">Farzi Mushayra of The Day</h1>
+    <div class="shayri-container">
+      <p class="shayri-text">Loading...</p>
+      <p class="shayar-text"></p>
+    </div>
   </div>
 
   <script src="script.js"></script>
