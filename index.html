@@ -36,11 +36,29 @@
   <div class="container">
     <h1 class="text-center">Farzi Mushayra of The Day</h1>
     <div class="shayri-container">
-      <p class="shayri-text">Loading...</p>
-      <p class="shayar-text"></p>
+      <p class="shayri-text" id="shayriText">Loading...</p>
+      <p class="shayar-text" id="shayarText"></p>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    function getRandomShayri() {
+      fetch('https://script.google.com/macros/s/AKfycbyOk3Z6XvFykvhkrxhQz0fSF0cpKMJQ3WOcjXii-L7K20G-VHKd1kEsv_WXUBqj8woz/exec')
+        .then(response => response.json())
+        .then(data => {
+          const shayriText = document.getElementById('shayriText');
+          const shayarText = document.getElementById('shayarText');
+          shayriText.innerText = data.shayri;
+          shayarText.innerText = `- ${data.shayar}`;
+        })
+        .catch(error => {
+          const shayriText = document.getElementById('shayriText');
+          shayriText.innerText = 'Failed to fetch shayri.';
+          console.error('Error fetching shayri:', error);
+        });
+    }
+
+    getRandomShayri();
+  </script>
 </body>
 </html>
