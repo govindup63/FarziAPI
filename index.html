@@ -3,65 +3,8 @@
 <head>
   <title>Farzi Mushayra of The Day</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body {
-      background-color: ##cfcbc6;
-      padding-top: 50px;
-    }
-    .wrapper {
-      width: 100%;
-      height:100vh;
-      text-align:center;
-    }
-    h4{
-      font-weight:100;
-      font-size:28px;
-      margin:0;
-      padding: 8em 0 1em 0;
-    }
-    
-
-    .shayri-container {
-      max-width: 500px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 6px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position:relative;
-    }
-
-    .shayri-text {
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 27px;
-      line-height: 1.5;
-    }
-    .text-center {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 2.5rem;
-        font-weight: bold; 
-        color: #2e2d2c;
-        }
-
-    .shayar-text {
-      font-style: italic;
-      color: #777;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      margin-bottom: 9px;
-      padding-right: 11px;
-      
-     }
+  <<link rel="stylesheet"  href="style.css">
   
-   
-   
-  </style>
 </head>
 <body>
   <div class="wrapper">
@@ -74,26 +17,8 @@
     </div>
   </div>
   </div>
-  
-
-  <script>
-    function getRandomShayri() {
-      fetch('https://script.google.com/macros/s/AKfycbyOk3Z6XvFykvhkrxhQz0fSF0cpKMJQ3WOcjXii-L7K20G-VHKd1kEsv_WXUBqj8woz/exec')
-        .then(response => response.json())
-        .then(data => {
-          const shayriText = document.getElementById('shayriText');
-          const shayarText = document.getElementById('shayarText');
-          shayriText.innerText = data.shayri;
-          shayarText.innerText = `- ${data.shayar}`;
-        })
-        .catch(error => {
-          const shayriText = document.getElementById('shayriText');
-          shayriText.innerText = 'Failed to fetch shayri.';
-          console.error('Error fetching shayri:', error);
-        });
-    }
-
-    getRandomShayri();
+  <script src = "script.js">
+    
   </script>
-</body>
+  </body>
 </html>
